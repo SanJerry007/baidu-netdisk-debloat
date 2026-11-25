@@ -1,0 +1,15 @@
+# Run output belongs in %ProgramData%\AppDebloat\baidunetdisk, never in this repo (see .dataclass.json).
+*.log
+*.transcript.txt
+journal.jsonl
+options.json
+state.json
+elevated-tasks.json
+backup/
+regkeys/
+
+# Editor and OS clutter
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

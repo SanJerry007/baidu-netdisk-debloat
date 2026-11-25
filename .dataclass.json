@@ -1,0 +1,13 @@
+{
+  "_comment": [
+    "Every path in this repo belongs to exactly one class.",
+    "TOOL    = code, README, docs.",
+    "FIXTURE = none in this repo.",
+    "DATA    = anything a real run produced. Never in this repo.",
+    "Enforced by tools/data_boundary.py from the fleet-guards checkout (git config fleet.guards) through .githooks."
+  ],
+  "_audited": "2026-11-25 AUDIT at repo creation. BaiduNetdiskDebloat.ps1 writes only to the Baidu Netdisk install under %APPDATA%\\baidu\\BaiduNetdisk, the registry (Baidu's own keys, Explorer's Blocked list, Office and browser policies), Windows Firewall rules, one service's start type, Windows notification settings, a scheduled task, and its own state folder %ProgramData%\\AppDebloat\\baidunetdisk (journal.jsonl, options.json, state.json, auto.log, history.log, backup\\, regkeys\\, an installed copy of the script). Every one of those paths is outside any git worktree, and the script never writes to a path relative to itself or to this repo. So the empty data list is an audited conclusion, not a default.",
+  "data": [],
+  "data_sealed": [],
+  "fixture": []
+}
